@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<a href="/">首页</a>
-<a href="/stock">股票</a>
+<a [routerLink]="['/']">首页</a>
+<a [routerLink]="['/stock']" [queryParams]="{id:1}">商品详情</a>
 <input type="button" value="股票" (click)="toStock()">
 <router-outlet></router-outlet>
