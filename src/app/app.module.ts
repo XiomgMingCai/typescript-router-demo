@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { StockComponent } from './stock/stock.component';
 import { No404Component } from './no404/no404.component';
+import { ProductComponent } from './product/product.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { No404Component } from './no404/no404.component';
     AppComponent,
     HomeComponent,
     StockComponent,
-    No404Component
+    No404Component,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

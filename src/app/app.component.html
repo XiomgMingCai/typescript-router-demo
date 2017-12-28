@@ -2,4 +2,5 @@
 <a [routerLink]="['/']">首页</a>
 <a [routerLink]="['/stock']" [queryParams]="{id:1}">商品详情</a>
 <input type="button" value="股票" (click)="toStock()">
+<a [routerLink]="['/product',1]" >product</a>
 <router-outlet></router-outlet>
