@@ -14,4 +14,7 @@ export class AppComponent {
   toStock(){
     this.router.navigate(['/stock'])
   }
+  toProduct(){
+    this.router.navigate(['/product',3])
+  }
 }

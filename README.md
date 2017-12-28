@@ -31,3 +31,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 1.修改路由配置;
 2.HTML中数组传参；
 3.接受中将queryParams改为params即可；
+
+# 订阅
+
+当组件路由到自身的时候，组件不会重新创建，ngOnInit不会被调用，这里需要路由的订阅法
+this.routeInfo.params.subscribe((params: Params) => this.stockId = params["id"])
+路由改变(params: Params) => this.stockId = params["id"]这个方法被调用
