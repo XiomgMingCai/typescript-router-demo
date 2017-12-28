@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-stock',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stock.component.css']
 })
 export class StockComponent implements OnInit {
-
-  constructor() { }
+  private stockID:number;
+  constructor(private routeInfo:ActivatedRoute) { }
 
   ngOnInit() {
+    this.stockID = this.routeInfo.snapshot.queryParams.id
   }
 
 }
