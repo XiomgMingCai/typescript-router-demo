@@ -12,6 +12,7 @@ import { BuyerListComponent } from './buyer-list/buyer-list.component';
 import { SellerListComponent } from './seller-list/seller-list.component';
 import { ZixunComponent } from './zixun/zixun.component';
 import {PermissionGuard} from "./guard/permission.guard";
+import {FocusGuard} from "./guard/focus.guard";
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import {PermissionGuard} from "./guard/permission.guard";
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [PermissionGuard],
+  providers: [PermissionGuard,FocusGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

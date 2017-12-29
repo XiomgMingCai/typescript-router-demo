@@ -8,6 +8,7 @@ import {BuyerListComponent} from "./buyer-list/buyer-list.component";
 import {SellerListComponent} from "./seller-list/seller-list.component";
 import {ZixunComponent} from "./zixun/zixun.component";
 import {PermissionGuard} from "./guard/permission.guard";
+import {FocusGuard} from "./guard/focus.guard";
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -17,7 +18,10 @@ const routes: Routes = [
       {path: 'sellerList/:id', component: SellerListComponent},
     ]
   },
-  {path: 'stock', component: StockComponent},
+  {
+    path: 'stock', component: StockComponent,
+    canDeactivate: [FocusGuard]
+  },
   {path: 'zixun', component: ZixunComponent, outlet: 'aux',
     canActivate:[PermissionGuard]},//只能显示在aux插座上
   {path: 'product/:id', component: ProductComponent},
