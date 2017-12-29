@@ -13,6 +13,8 @@ import { SellerListComponent } from './seller-list/seller-list.component';
 import { ZixunComponent } from './zixun/zixun.component';
 import {PermissionGuard} from "./guard/permission.guard";
 import {FocusGuard} from "./guard/focus.guard";
+import { GoodsComponent } from './goods/goods.component';
+import {GoodsResove} from "./guard/goods.resove";
 
 
 @NgModule({
@@ -24,13 +26,14 @@ import {FocusGuard} from "./guard/focus.guard";
     ProductComponent,
     BuyerListComponent,
     SellerListComponent,
-    ZixunComponent
+    ZixunComponent,
+    GoodsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [PermissionGuard,FocusGuard],
+  providers: [PermissionGuard,FocusGuard,GoodsResove],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

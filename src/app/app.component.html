@@ -8,6 +8,9 @@
 <a [routerLink]="['/product',1]">product</a>
 <a [routerLink]="['/product',2]">product2</a>
 <input type="button" value="product3" (click)="toProduct()">
+
+<button [routerLink]="['/goods',1]" style="padding: 5px;background-color: aquamarine">IMD</button>
+<button [routerLink]="['/goods',2]" style="padding: 5px;background-color: aquamarine">BABA</button>
 <div class="page-content">
   <router-outlet></router-outlet>
 </div>

@@ -1,3 +1,4 @@
+///<reference path="../../node_modules/@angular/router/src/config.d.ts"/>
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {HomeComponent} from "./home/home.component";
@@ -9,6 +10,8 @@ import {SellerListComponent} from "./seller-list/seller-list.component";
 import {ZixunComponent} from "./zixun/zixun.component";
 import {PermissionGuard} from "./guard/permission.guard";
 import {FocusGuard} from "./guard/focus.guard";
+import {GoodsComponent} from "./goods/goods.component";
+import {GoodsResove} from "./guard/goods.resove";
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -25,6 +28,11 @@ const routes: Routes = [
   {path: 'zixun', component: ZixunComponent, outlet: 'aux',
     canActivate:[PermissionGuard]},//只能显示在aux插座上
   {path: 'product/:id', component: ProductComponent},
+  {path: 'goods/:id', component: GoodsComponent,
+    resolve:{
+      goods:GoodsResove
+    }
+  },
   {path: '**', component: No404Component},
 
 ];
