@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { StockComponent } from './stock/stock.component';
 import { No404Component } from './no404/no404.component';
 import { ProductComponent } from './product/product.component';
+import { BuyerListComponent } from './buyer-list/buyer-list.component';
+import { SellerListComponent } from './seller-list/seller-list.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { ProductComponent } from './product/product.component';
     HomeComponent,
     StockComponent,
     No404Component,
-    ProductComponent
+    ProductComponent,
+    BuyerListComponent,
+    SellerListComponent
   ],
   imports: [
     BrowserModule,

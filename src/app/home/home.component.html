@@ -3,3 +3,9 @@
 </p>
 <P>{{isPro}}</P>
 <p>{{par}}</p>
+<!--会在根路径上去找-->
+<!--<a [routerLink]="['/']">买家列表</a>-->
+
+<a [routerLink]="['./']">买家列表</a>
+<a [routerLink]="['./sellerList',100]">卖家列表</a>
+<router-outlet></router-outlet>

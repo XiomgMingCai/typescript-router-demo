@@ -4,13 +4,21 @@ import {HomeComponent} from "./home/home.component";
 import {StockComponent} from "./stock/stock.component";
 import {No404Component} from "./no404/no404.component";
 import {ProductComponent} from "./product/product.component";
+import {BuyerListComponent} from "./buyer-list/buyer-list.component";
+import {SellerListComponent} from "./seller-list/seller-list.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path: 'home', component: HomeComponent, data: [{isPro: true}]},
+  {
+    path: 'home', component: HomeComponent, data: [{isPro: true}], children: [
+      {path: '', component: BuyerListComponent},
+      {path: 'sellerList/:id', component: SellerListComponent},
+    ]
+  },
   {path: 'stock', component: StockComponent},
   {path: 'product/:id', component: ProductComponent},
   {path: '**', component: No404Component},
+
 ];
 
 @NgModule({
