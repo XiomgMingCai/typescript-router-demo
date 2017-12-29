@@ -12,8 +12,10 @@ export class AppComponent {
 
   }
   toStock(){
-    this.router.navigate(['/stock'])
-  }
+    // this.router.navigate(['stock'])
+    this.router.navigate(['stock'], {queryParams: {id: 3}})
+    // this.router.navigateByUrl('/stock?id=2')
+}
   toProduct(){
     this.router.navigate(['/product',3])
   }

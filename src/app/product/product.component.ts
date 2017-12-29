@@ -7,7 +7,7 @@ import {ActivatedRoute, Params} from "@angular/router";
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  private productID: number;
+   productID: number;
 
   constructor(private routeInfo: ActivatedRoute) {
   }
