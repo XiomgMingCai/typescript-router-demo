@@ -1,8 +1,14 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <a [routerLink]="['/home']">首页</a>
+<a [routerLink]="[{outlets:{primary:'home',aux:'zixun'}}]">primary:'home'开始咨询</a>
+<a [routerLink]="[{outlets:{aux:'zixun'}}]">开始咨询</a>
+<a [routerLink]="[{outlets:{aux:null}}]">结束咨询</a>
 <a [routerLink]="['/stock']" [queryParams]="{id:1}">商品详情</a>
 <input type="button" value="股票" (click)="toStock()">
-<a [routerLink]="['/product',1]" >product</a>
-<a [routerLink]="['/product',2]" >product2</a>
+<a [routerLink]="['/product',1]">product</a>
+<a [routerLink]="['/product',2]">product2</a>
 <input type="button" value="product3" (click)="toProduct()">
-<router-outlet></router-outlet>
+<div class="page-content">
+  <router-outlet></router-outlet>
+</div>
+<router-outlet name="aux"></router-outlet>

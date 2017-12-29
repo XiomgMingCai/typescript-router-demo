@@ -10,6 +10,7 @@ import { No404Component } from './no404/no404.component';
 import { ProductComponent } from './product/product.component';
 import { BuyerListComponent } from './buyer-list/buyer-list.component';
 import { SellerListComponent } from './seller-list/seller-list.component';
+import { ZixunComponent } from './zixun/zixun.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { SellerListComponent } from './seller-list/seller-list.component';
     No404Component,
     ProductComponent,
     BuyerListComponent,
-    SellerListComponent
+    SellerListComponent,
+    ZixunComponent
   ],
   imports: [
     BrowserModule,

@@ -6,6 +6,7 @@ import {No404Component} from "./no404/no404.component";
 import {ProductComponent} from "./product/product.component";
 import {BuyerListComponent} from "./buyer-list/buyer-list.component";
 import {SellerListComponent} from "./seller-list/seller-list.component";
+import {ZixunComponent} from "./zixun/zixun.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -16,6 +17,7 @@ const routes: Routes = [
     ]
   },
   {path: 'stock', component: StockComponent},
+  {path: 'zixun', component: ZixunComponent, outlet: 'aux'},//只能显示在aux插座上
   {path: 'product/:id', component: ProductComponent},
   {path: '**', component: No404Component},
 

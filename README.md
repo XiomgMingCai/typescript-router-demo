@@ -37,3 +37,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 当组件路由到自身的时候，组件不会重新创建，ngOnInit不会被调用，这里需要路由的订阅法
 this.routeInfo.params.subscribe((params: Params) => this.stockId = params["id"])
 路由改变(params: Params) => this.stockId = params["id"]这个方法被调用
+
+# 辅助路由，
+
+的添加方式在<router-outlet></router-outlet>下面添加带name属性的router-outlet,在路由配置文件中对应好辅助路由做好配置，那么就可有在同一个父组件中显示两个路由跳转的组件信息。注意调用方式：<a [routerLink]="[{outlets:{aux:'xxx'}}]">xxx</a>生成地址：/stock/22(aux:xxx)
